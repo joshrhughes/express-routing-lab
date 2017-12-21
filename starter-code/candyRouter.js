@@ -3,9 +3,9 @@ var bodyParser = require('body-parser');
 router = express.Router();
 
 var candies = [
-  { name: "Snickers", color: "Brown" },
-  { name: "ChocoTaco", color: "Dark Brown" },
-  { name: "Skittles", color: "Rainbow" }
+  { id: 1, name: "Snickers", color: "Brown" },
+  { id: 2, name: "ChocoTaco", color: "Dark Brown" },
+  { id: 3, name: "Skittles", color: "Rainbow" }
 ];
 
 //What would need to go into candies
@@ -17,6 +17,26 @@ router.get('/', function(req,res) {
 	res.send(candies);
 });
 
-// Fill out the rest of the routes here
+router.get('/:id', function(req, res) {
+  // SHOW
+  res.send(candies[req.params.id-1]);
+});
+
+
+router.post('/', function(req, res) {
+  // CREATE
+
+});
+
+
+router.put('/:id', function(req, res) {
+  // UPDATE
+
+});
+
+router.delete('/:id', function(req, res) {
+  // DELETE
+
+});
 
 module.exports = router;
