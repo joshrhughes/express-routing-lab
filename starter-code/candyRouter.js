@@ -52,7 +52,7 @@ router.delete('/:id', function(req, res) {
   // DELETE
   let i = Number(req.params.id)-1;
   candies[i] = null;
-  res.send("Dropped that candy like it was hot")
+  res.send("Dropped it like its hot")
 });
 
 module.exports = router;
