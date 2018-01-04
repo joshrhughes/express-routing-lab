@@ -50,7 +50,9 @@ router.put('/:id', function(req, res) {
 
 router.delete('/:id', function(req, res) {
   // DELETE
-
+  let i = Number(req.params.id)-1;
+  candies[i] = null;
+  res.send("Dropped that candy like it was hot")
 });
 
 module.exports = router;
