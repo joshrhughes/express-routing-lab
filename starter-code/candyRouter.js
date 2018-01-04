@@ -25,6 +25,11 @@ router.get('/:id', function(req, res) {
 
 router.post('/', function(req, res) {
   // CREATE
+  //console.log(req);
+  var create = req.body;
+  console.log(create);
+  candies.push(create);
+  res.send(create);
 
 });
 
