@@ -36,7 +36,16 @@ router.post('/', function(req, res) {
 
 router.put('/:id', function(req, res) {
   // UPDATE
-
+  for (i = 0; i < candies.length; i++) {
+    if(candies[i].id == req.body.id){
+      candies[i].name = req.body.name;
+      candies[i].color = req.body.color;
+    }
+    // else{
+    //   res.send("There is not a candy at this ID");
+    // }
+    res.send();
+  }
 });
 
 router.delete('/:id', function(req, res) {
